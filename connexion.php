@@ -7,8 +7,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $password = $_POST['password'];
 
   if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "Email non valide";
-    die;
+    header('Location: form-connexion.php');
   }
   echo "<div class='alert alert-success'>Connexion réussie</div>";
   ?>
