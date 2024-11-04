@@ -7,12 +7,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
   $password = $_POST['password'];
 
   if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    header('Location: form-connexion.php');
+    header('Location: form-connexion.php?error=email');
   }
   echo "<div class='alert alert-success'>Connexion réussie</div>";
   ?>
   <div class="container">
-    <h1>Exemple de Forumulaire de connexion</h1>
+    <h1>Exemple de Formulaire de connexion</h1>
 
   <?php
   echo "<p class='lead'>Email : " . htmlspecialchars($email) . "</p>";
