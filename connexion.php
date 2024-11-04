@@ -10,7 +10,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     echo "Email non valide";
     die;
   }
-
+  echo "<div class='alert alert-success'>Connexion réussie</div>";
   ?>
   <div class="container">
     <h1>Exemple de Forumulaire de connexion</h1>
